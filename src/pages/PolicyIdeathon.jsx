@@ -10,7 +10,7 @@ const PolicyIdeathonPage = () => {
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
-<PolicyHeroSection />
+    <PolicyHeroSection />
       {/* Eligibility Section */}
     <EligibilityCriteria />
 

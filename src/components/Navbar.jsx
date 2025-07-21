@@ -14,21 +14,22 @@ const Navbar = () => {
     }
   };
 
-  const handleNav = (sectionId) => {
-    setIsOpen(false); // close mobile menu
-    if (location.pathname === '/') {
-      scrollToSection(sectionId);
-    } else {
-      navigate(`/#${sectionId}`);
-    }
-  };
-
+ const handleNav = (sectionId, route) => {
+  setIsOpen(false);
+  if (route) {
+    navigate(`/${sectionId}`);
+  } else if (location.pathname === '/') {
+    scrollToSection(sectionId);
+  } else {
+    navigate(`/#${sectionId}`);
+  }
+};
   const navItems = [
     { name: 'About Us', id: 'aboutus' },
     { name: 'Our Work', id: 'ourwork' },
-    { name: 'Knowledge Hub', id: 'knowledgehub' },
+    { name: 'Knowledge Hub', id: 'knowledgehub' ,route:true},
     { name: 'Get Involved', id: 'getinvolved' },
-    { name: 'Donate Now', id: 'donate', button: 'orange' },
+    { name: 'Donate Now', id: 'donate', button: 'orange' ,route:true},
     { name: 'Contact Us', id: 'contactus', button: 'indigo' },
   ];
 
@@ -51,10 +52,10 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-6 items-center text-black font-medium">
-          {navItems.map(({ name, id, button }) => (
+          {navItems.map(({ name, id, button,route }) => (
             <li key={id}>
               <button
-                onClick={() => handleNav(id)}
+                onClick={() => handleNav(id,route)}
                 className={
                   button === 'orange'
             ? 'bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition'

@@ -13,7 +13,7 @@ const involvementOptions = [
       "Adopt fleet and employee road safety policies",
     ],
     button: "Partner With Us",
-    link: "https://example.com/partner",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfMz0z7QhK0ir2oVxD_uZ89KJ-7ATAe1BvHJBFOoLBb84Duog/viewform",
   },
   {
     icon: <Handshake className="w-8 h-8 text-indigo-600" />,
@@ -26,7 +26,7 @@ const involvementOptions = [
       "Collaborative policy advocacy",
     ],
     button: "Collaborate",
-    link: "https://example.com/partner",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfMz0z7QhK0ir2oVxD_uZ89KJ-7ATAe1BvHJBFOoLBb84Duog/viewform",
   },
   {
     icon: <User2 className="w-8 h-8 text-indigo-600" />,
@@ -38,7 +38,7 @@ const involvementOptions = [
       "Host sessions in schools & communities",
     ],
     button: "Volunteer",
-    link: "https://example.com/partner",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfMz0z7QhK0ir2oVxD_uZ89KJ-7ATAe1BvHJBFOoLBb84Duog/viewform",
   },
 ];
 
@@ -47,7 +47,7 @@ const GetInvolved = () => {
     <section id="getinvolved" className="scroll-mt-20">
       <section className="py-16 px-4 text-center bg-white">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Get Involved</h2>
-        <p className="max-w-2xl mx-auto text-gray-600 mb-10">
+        <p className="max-w-3xl mx-auto text-gray-600 mb-10">
           You Can Help Drive the Change. Crash Free India is built on collaboration.
           Solving India's road safety crisis requires a united front – governments,
           changemakers, companies, and citizens working together. No matter who you are,
@@ -64,18 +64,21 @@ const GetInvolved = () => {
                 <div className="bg-indigo-50 p-4 rounded-full">{item.icon}</div>
               </div>
               <h3 className="text-xl font-semibold text-center mb-2">{item.title}</h3>
-              <p className="text-[0.93rem] text-gray-700 text-center mb-4">{item.description}</p>
-              <ul className="list-disc list-inside marker:text-indigo-600 marker:text-lg text-black text-[1.0rem] space-y-1 leading-snug mb-8">
+              <p className="text-md text-gray-700 text-center mb-4">{item.description}</p>
+              <ul className="list-disc list-inside marker:text-indigo-600 marker:text-lg text-black text-sm md:text-base lg:text-sm space-y-1 leading-snug mb-8">
                 {item.points.map((point, idx) => (
-                  <li key={idx} className="whitespace-nowrap">{point}</li>
+                  <li key={idx}>{point}</li>
                 ))}
               </ul>
               <div className="mt-auto text-center">
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  <button className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition w-full">
-                    {item.button}
-                  </button>
-                </a>
+                <a
+  href={item.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition w-full inline-block text-center"
+>
+  {item.button}
+</a>
               </div>
             </div>
           ))}

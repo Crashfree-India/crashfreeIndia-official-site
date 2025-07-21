@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const IdeathonStructure = () => {
-  const [openStage, setOpenStage] = useState(1); // State to manage which stage's description is open
+  const [openStage, setOpenStage] = useState(1);
 
   const stages = [
     {
@@ -31,7 +31,7 @@ const IdeathonStructure = () => {
   ];
 
   const toggleStage = (id) => {
-    setOpenStage(openStage === id ? null : id); // Toggle open/close or close if already open
+    setOpenStage(openStage === id ? null : id);
   };
 
   return (

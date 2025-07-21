@@ -31,25 +31,29 @@ export default function ReadyToJoinSection() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border hover:text-accent-foreground rounded-md bg-white text-[#4940ff] hover:bg-gray-100 text-lg px-8 py-5 h-auto border-white"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mr-2"
-              >
-                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-              </svg>
-              Apply Now and Save Lives
-            </button>
-            <button
+          <button
+  disabled
+  className="inline-flex items-center justify-center gap-2 px-8 py-5 text-lg font-medium text-gray-600 bg-gray-300 border border-gray-300 rounded-md cursor-not-allowed transition-colors disabled:opacity-50 disabled:pointer-events-none"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="mr-2"
+  >
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  </svg>
+  Applications Closed
+</button>
+
+<a href="https://docs.google.com/document/d/1gNOSOCiJTetCU3UmfRNdfR7oZn_Z3HrjaXhB7kozFcM/edit?tab=t.0"
+              target="_blank"
+    rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border hover:text-accent-foreground rounded-md bg-transparent text-white border-white hover:bg-white/20 text-lg px-8 py-5 h-auto"
             >
               <svg
@@ -68,7 +72,8 @@ export default function ReadyToJoinSection() {
                 <line x1="12" x2="12" y1="15" y2="3" />
               </svg>
               Download the Module
-            </button>
+            
+            </a>
           </div>
         </div>
       </div>

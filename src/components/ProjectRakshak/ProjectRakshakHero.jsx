@@ -3,7 +3,6 @@ import Road from "../../assets/road2.png"
 export default function ProjectRakshakHero() {
   return (
     <section className="relative py-10 md:py-16 ">
-      {/* Background image and overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={Road}
@@ -51,10 +50,12 @@ export default function ProjectRakshakHero() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center justify-center gap-2 font-medium rounded-md bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-4 h-auto shadow-lg hover:shadow-xl transition-all">
-              Apply Now
+            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-medium text-gray-600 bg-gray-300 rounded-md shadow-lg cursor-not-allowed">
+              Application Closed 
             </button>
-            <button className="inline-flex items-center justify-center gap-2 border rounded-md bg-transparent text-white border-white hover:bg-white/10 text-lg px-8 py-4 h-auto shadow-lg hover:shadow-xl transition-all">
+            <a href="https://docs.google.com/document/d/1gNOSOCiJTetCU3UmfRNdfR7oZn_Z3HrjaXhB7kozFcM/edit?tab=t.0"   target="_blank"
+    rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 border rounded-md bg-transparent text-white border-white hover:bg-white/10 text-lg px-8 py-4 h-auto shadow-lg hover:shadow-xl transition-all">
               Learn More
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +72,8 @@ export default function ProjectRakshakHero() {
                 <path d="M10 14 21 3" />
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
               </svg>
-            </button>
+            
+            </a>
           </div>
         </div>
       </div>

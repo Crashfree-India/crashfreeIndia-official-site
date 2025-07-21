@@ -1,6 +1,6 @@
 // components/AboutUs.jsx
 import React from 'react';
-import { Eye, Rocket, Wrench } from 'lucide-react'; // You can use Heroicons or Lucide for icons
+import { Eye, Rocket, Wrench } from 'lucide-react';
 
 const AboutUs = () => {
   return (

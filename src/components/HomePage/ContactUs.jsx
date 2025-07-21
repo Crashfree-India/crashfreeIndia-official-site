@@ -1,4 +1,3 @@
-// components/ContactUs.jsx
 import React from 'react';
 import {
   Mail,
@@ -102,16 +101,16 @@ const ContactUs = () => {
         </p>
         <div className="flex gap-4 text-indigo-600">
          <a
-  href="#"
+  href="https://www.instagram.com/crashfreeindia/#"
   aria-label="Instagram"
   className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-200 transition"
 >
   <Instagram className="w-5 h-5 text-white" />
 </a>
-          <a href="#" aria-label="Twitter"  className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-200 transition">
+          <a href="https://x.com/CrashfreeIndia" aria-label="Twitter"  className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-200 transition">
             <Twitter className="w-6 h-6 text-white" />
           </a>
-          <a href="#" aria-label="LinkedIn"  className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-200 transition">
+          <a href="https://www.linkedin.com/company/crashfree-india" aria-label="LinkedIn"  className="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-200 transition">
             <Linkedin className="w-6 h-6 text-white" />
           </a>
         </div>

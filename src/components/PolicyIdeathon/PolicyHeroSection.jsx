@@ -4,7 +4,6 @@ import Policy from "../../assets/policy.png";
 const PolicyHeroSection = () => {
   return (
     <section className="relative h-auto flex items-center justify-center text-center text-white overflow-hidden ">
-      {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={Policy}
@@ -31,13 +30,17 @@ const PolicyHeroSection = () => {
 
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="https://registration-link.com"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSerpi_jlNduO7oySpYfBzgSTcdFG6wzkiV64NrGeY5kfy5Z9Q/viewform"
+            target="_blank"
+             rel="noopener noreferrer"
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md font-medium transition"
           >
             Register Now &gt;
           </a>
           <a
-            href="#learn-more"
+            href="https://docs.google.com/document/d/1tiYl8DMOlTVsWkInEIttB864i56_nqOf5dGrqmP2O6o/edit?tab=t.0"
+            target="_blank"
+             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 h-11 text-lg font-medium text-white whitespace-nowrap rounded-md border border-white/30 bg-white/5 hover:bg-white/20 backdrop-blur-sm shadow-md transition"
           >
             Learn More
