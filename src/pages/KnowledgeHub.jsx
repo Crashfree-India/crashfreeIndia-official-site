@@ -1,9 +1,20 @@
 import React from "react";
 import * as LucideIcons from "lucide-react"
+import { useState } from "react";
 import Accordion from "../components/KnowledgeHub/Accordion";
+import { supabase } from '../supabase'; // adjust path as needed
+import StoryForm from "../components/KnowledgeHub/StoryForm";
+import ThankYouScreen from "../components/KnowledgeHub/ThankYouScreen";
 
 export default function KnowledgeHub() {
-    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [showThankYou, setShowThankYou] = useState(false);
+    const handleOverlayClick = (e) => {
+  if (e.target.classList.contains("modal-overlay")) {
+    setIsModalOpen(false);
+  }
+};
+
   return (
     <main className="flex-grow ">
         {/* hero section */}
@@ -12,7 +23,7 @@ export default function KnowledgeHub() {
         id="knowledgehub"
         style={{
           backgroundImage:
-            "url('/lovable-uploads/57729120-bd74-4c27-b8f6-186e028a0513.png')",
+            "url('lovable-uploads/57729120-bd74-4c27-b8f6-186e028a0513.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -121,26 +132,74 @@ export default function KnowledgeHub() {
                   placeholder="Search articles..."
                 />
               </div>
-              <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 h-10 bg-blue-600 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium text-sm"
-                type="button"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-plus w-4 h-4"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M8 12h8" />
-                  <path d="M12 8v8" />
-                </svg>
-                Share Your Story
-              </button>
+           <button
+        onClick={() => setIsModalOpen(true)}  
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 h-10 bg-blue-600 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium text-sm"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-plus w-4 h-4"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 12h8" />
+          <path d="M12 8v8" />
+        </svg>
+        Share Your Story
+      </button>
+
+      {/*  Modal */}
+      {isModalOpen && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-10 backdrop-blur-sm px-4 modal-overlay" onClick={handleOverlayClick}>
+    <div className="bg-white rounded-lg shadow-lg p-6 overflow-y-auto max-h-[90vh] relative">
+
+      {showThankYou ? (
+        <ThankYouScreen onClose={() => {
+          setShowThankYou(false);
+          setIsModalOpen(false);
+        }} />
+      ) : (
+        <>
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 flex items-center justify-center gap-2">
+            <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+            Share Your Good Samaritan Story
+          </h2>
+
+          <div className="text-center bg-gradient-to-r from-blue-50 to-red-50 p-6 rounded-lg mb-8">
+            <p className="text-gray-700 mb-2">
+              <strong>Thank you for being the kind of person who stops to help</strong> or sharing the stories of those who helped.
+            </p>
+            <p className="text-gray-600 mb-4">
+              A true road hero. Your story matters—because it can inspire others to act too.
+            </p>
+            <div className="bg-white p-4 rounded-lg border-l-4 border-[#003B9B]"> 
+              <p className="text-sm text-gray-600 mb-2">
+                <strong>Verified stories stand a chance to receive an Amazon voucher worth ₹1000.</strong>
+              </p>
+              <p className="text-sm text-gray-500">
+                Not as a reward. But as a small thank you. A gesture of gratitude for a life-saving act that can't truly be measured.
+              </p>
+            </div>
+          </div>
+
+          <StoryForm
+            onSuccess={() => setShowThankYou(true)}
+            onCancel={() => setIsModalOpen(false)}
+          />
+        </>
+      )}
+    </div>
+  </div>
+)}
+
             </div>
           </div>
         </div>
@@ -161,7 +220,7 @@ export default function KnowledgeHub() {
           </p>
           <button
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-blue-800 transition-colors font-medium text-xs sm:text-sm"
-            type="button"
+           onClick={() => setIsModalOpen(true)}  type="button"
           >
             Share Your Story
             <svg

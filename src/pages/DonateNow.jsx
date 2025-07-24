@@ -75,7 +75,7 @@ const DonateNow = () => {
             It turns policy into protection. Roads into lifelines. Ideas into impact.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex items-center justify-center gap-2 h-10 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200">
+            <a href="#donation-form" className="inline-flex items-center justify-center gap-2 h-10 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200">
               Donate Now
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const DonateNow = () => {
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </section>
