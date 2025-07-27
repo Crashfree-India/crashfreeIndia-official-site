@@ -20,7 +20,7 @@ export default function KnowledgeHub() {
         {/* hero section */}
       <section
         className="relative flex   items-center justify-center text-white overflow-hidden"
-        id="knowledgehub"
+        id="blog"
         style={{
           backgroundImage:
             "url('lovable-uploads/57729120-bd74-4c27-b8f6-186e028a0513.png')",

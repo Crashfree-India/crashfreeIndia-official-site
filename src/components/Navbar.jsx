@@ -27,7 +27,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'About Us', id: 'aboutus' },
     { name: 'Our Work', id: 'ourwork' },
-    { name: 'Knowledge Hub', id: 'knowledgehub' ,route:true},
+    { name: 'Knowledge Hub', id: 'blog' ,route:true},
     { name: 'Get Involved', id: 'getinvolved' },
     { name: 'Donate Now', id: 'donate', button: 'orange' ,route:true},
     { name: 'Contact Us', id: 'contactus', button: 'indigo' },

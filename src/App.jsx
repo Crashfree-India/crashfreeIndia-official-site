@@ -24,7 +24,7 @@ function App() {
         <Route path="/projectrakshak" element={<ProjectRakshak />}></Route>
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route path="/terms-conditions" element={<TermsConditions />}></Route>
-        <Route path="/knowledgehub" element={<KnowledgeHub />}></Route>
+        <Route path="/blog" element={<KnowledgeHub />}></Route>
         <Route path="/donate" element={<DonateNow />}></Route>
 
       </Routes>
