@@ -4,4 +4,29 @@
   body {
     font-family: 'Inter', sans-serif;
   }
+
+  h2 {
+    @apply text-3xl font-semibold mt-8 mb-4 text-gray-800;
+  }
+
+  h3 {
+    @apply text-2xl font-medium mt-6 mb-3 text-gray-700;
+  }
+}
+
+/* ✅ Blockquote Styles */
+.blockquote-success {
+  @apply border-l-4 border-green-500 bg-green-50 text-green-800 p-4 rounded;
+}
+
+.blockquote-warning {
+  @apply border-l-4 border-yellow-500 bg-yellow-50 text-yellow-900 p-4 rounded;
+}
+
+.blockquote-info {
+  @apply border-l-4 border-blue-500 bg-blue-50 text-blue-800 p-4 rounded;
+}
+
+.blockquote-danger {
+  @apply border-l-4 border-red-500 bg-red-50 text-red-800 p-4 rounded;
 }
