@@ -10,6 +10,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import KnowledgeHub from "./pages/KnowledgeHub";
 import DonateNow from "./pages/DonateNow";
+import BlogPage from "./components/KnowledgeHub/BlogPage";
+import BlogStoryPage from "./components/KnowledgeHub/BlogStoryPage";
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
         <Route path="/terms-conditions" element={<TermsConditions />}></Route>
         <Route path="/blog" element={<KnowledgeHub />}></Route>
         <Route path="/donate" element={<DonateNow />}></Route>
-
+        <Route path="/story-add" element={<BlogPage />}></Route>
+        <Route path="/blog/:slug" element={<BlogStoryPage/>} />
       </Routes>
       <Footer />
     </Router>
